@@ -7,9 +7,9 @@ import { setHTML } from "../Utils/Writer.js"
 
 function _drawCars() {
   let template = ''
-  appState.cars.forEach(car => template += car.CardTemplate)
+  appState.cars.forEach(car => template += car.CarCardTemplate)
   setHTML('listings', template)
-  setHTML('listing-form', Car.GetCarFormTemplate())
+  setHTML('listings-form', Car.GetCarFormTemplate())
 }
 
 function _drawActiveCar() {
@@ -41,7 +41,6 @@ export class CarsController {
     window.event.preventDefault()
     let form = window.event.target
     let formData = getFormData(form)
-    console.log(formData);
     carsService.createCar(formData)
   }
 

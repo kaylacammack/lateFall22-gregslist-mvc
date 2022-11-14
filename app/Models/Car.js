@@ -22,7 +22,7 @@ export class Car {
 
   // FIXME Step 7? update our template with fields from the class
 
-  get CardTemplate() {
+  get CarCardTemplate() {
     return `
     <div class="col-12 col-md-4 p-4">
       <div class="card">

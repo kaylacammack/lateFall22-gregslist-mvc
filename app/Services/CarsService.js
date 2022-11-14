@@ -7,7 +7,6 @@ import { saveState } from "../Utils/Store.js";
 class CarsService {
   setActiveCar(carId) {
     let foundCar = appState.cars.find(c => c.id == carId)
-    console.log(foundCar);
     appState.activeCar = foundCar
   }
   createCar(formData) {
@@ -22,7 +21,6 @@ class CarsService {
     // NOTE give me a new array of cars, where all of the cars Id's do not match the Id I passed down
     let filteredArray = appState.cars.filter(c => c.id != carId)
     appState.cars = filteredArray
-    console.log('New array in AppState:', appState.cars);
     saveState('cars', appState.cars)
   }
 
